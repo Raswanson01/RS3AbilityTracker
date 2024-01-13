@@ -32,4 +32,11 @@ namespace Rs3Tracker {
         public BarClass bar { get; set; }
         public Ability ability { get; set; }
     }
+
+    public class Rotation
+    {
+        public string name { get; set; }
+
+        public List<Ability> abilities { get; set; }
+    }
 }

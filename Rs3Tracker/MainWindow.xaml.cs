@@ -160,5 +160,16 @@ namespace Rs3Tracker {
             Server.ServerMenu serverMenu = new Server.ServerMenu();
             serverMenu.ShowDialog();
         }
+
+        private void onTop_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnRotations_Click(object sender, RoutedEventArgs e)
+        {
+            Rotations rotations = new Rotations();
+            rotations.ShowDialog();
+        }
     }
 }

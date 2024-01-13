@@ -12,9 +12,9 @@
         Title="Menu"
         Height="270"
         Width="550"
-        ResizeMode="NoResize"
+        ResizeMode="CanResize"
         Icon="radar.png">
-    <Grid>
+    <Grid Margin="0,0,0,-52">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition></RowDefinition>
@@ -53,7 +53,7 @@
                        HorizontalAlignment="Center"
                        Margin="5">
                 <CheckBox x:Name="TrackCD">Track CoolDowns?</CheckBox>
-                <CheckBox x:Name="onTop">Display alway on top?</CheckBox>
+                <CheckBox x:Name="onTop" Checked="onTop_Checked">Display always on top?</CheckBox>
                 <CheckBox x:Name="CanResize"
                           Content="Can Resize and not ClickThrough (Requires to restart of display window)"
                           Checked="CanResize_Checked"
@@ -80,6 +80,7 @@
                         Margin="5"
                         Click="btnStartTracker_Click" />
             </StackPanel>
+
             <StackPanel Orientation="Horizontal"
                         HorizontalAlignment="Center">
                 <Button x:Name="btnServer"
@@ -96,8 +97,14 @@
                         Width="150"
                         Margin="5"
                         Click="btnClose_Click" />
+                <Button x:Name="btnRotations"
+                        Content="Rotations" 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        Width="150"
+                        Margin="5"
+                        Click="btnRotations_Click" />
             </StackPanel>
         </StackPanel>
-
     </Grid>
 </Window>
